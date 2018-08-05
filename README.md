@@ -8,11 +8,12 @@
 
 - All Attributes can bind with data
 
+<img src="https://i.imgur.com/UlyfwxB.gif"/>
+
 ## Demo
 
 [![Edit imagvue demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/embed/n7ykx4rxyp?module=%2Fsrc%2FApp.vue&view=preview)
 
-<img src="https://i.imgur.com/UlyfwxB.gif"/>
 
 ## Installation 
 Get from npm / yarn:
