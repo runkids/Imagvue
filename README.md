@@ -26,19 +26,19 @@ yarn add imagvue
 ```
 or just include [imagvue.js](https://github.com/runkids/Imagvue/blob/master/dist/imagvue.js) to your view like 
 
-```js
+```html
 <script src='./imagvue.js'></script>
 ```
 
 ## Usage
 
 ##### html:
-```html
+```jsx
 <imagvue v-model="url" width="400" height="600"></imagvue>
 ```
 
 ##### vue file:
-``` js
+``` jsx
 import imagvue from 'imagvue'
 
 export default {
