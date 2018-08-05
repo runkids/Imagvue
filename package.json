@@ -1,0 +1,37 @@
+{
+  "name": "imagvue",
+  "version": "0.0.1",
+  "description": "Imagvue is a image processing component for Vue.js",
+  "main": "dist/imagvue.js",
+  "files": [
+    "dist/imagvue.js"
+  ],
+  "keywords": [
+    "vue",
+    "image",
+    "filter",
+    "image-filter",
+    "lazy-load",
+    "lazyLoad-image",
+    "vue-component"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/runkids/Imagvue.git"
+  },
+  "author": {
+    "name": "runkids",
+    "email": "egg358358@gmail.com>"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "parcel build ./src/imagvue.js"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.9.7"
+  },
+  "dependencies": {
+    "babel-preset-env": "^1.7.0",
+    "vue": "^2.5.17"
+  }
+}

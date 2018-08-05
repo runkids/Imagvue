@@ -1,0 +1,6 @@
+.DS_Store
+*.log
+.babelrc
+node_modules
+src
+.cache
