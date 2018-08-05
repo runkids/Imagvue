@@ -1,6 +1,6 @@
 {
   "name": "imagvue",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Imagvue is a image processing component for Vue.js",
   "main": "dist/imagvue.js",
   "files": [

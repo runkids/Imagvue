@@ -1,6 +1,7 @@
 <h1 align="center">Imagvue</h1>
 
-[![vue2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/) [![npm](https://img.shields.io/npm/v/imagvue.svg)](https://www.npmjs.com/package/imagvue) [![npm](https://img.shields.io/npm/dt/imagvue.svg)](https://www.npmjs.com/package/imagvue) [![npm](https://img.shields.io/npm/l/imagvue.svg)](https://github.com/runkids/Imagvue/blob/master/LICENSE)
+[![vue2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/) [![npm](https://img.shields.io/npm/v/imagvue.svg)](https://www.npmjs.com/package/imagvue) [![npm](https://img.shields.io/npm/l/imagvue.svg)](https://github.com/runkids/Imagvue/blob/master/LICENSE)
+
 
 - `Imagvue` provides basic image processing props(size,blur,contrast,grayscale, etc.).
 
@@ -334,7 +335,7 @@ methods:{
           :dropShadow="dropShadow"
           :customData="customData()"
       >
-        <lazy-load :src="d.lazy"></lazy-load>
+        <transition-group :src="d.lazy"></transition-group >
       </imagvue>
   </div>
 </template>
