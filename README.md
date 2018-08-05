@@ -118,7 +118,7 @@ call a function
 </imagvue>
 ```
 
-<img src="https://i.imgur.com/gRfQcHz.png"/>
+<img src="https://i.imgur.com/gRfQcHz.png" width='250' min-width="250"/>
 
 #####  5. blur
 Type: `String` , `Number`<br>
@@ -408,3 +408,8 @@ export default {
 }
 </style>
 ```
+## License
+Imagvue is licensed under MIT License.
+
+------------
+If you have any suggestions ideas or just wanna say something you can send me an email at egg358358@gmail.com , thank you.
