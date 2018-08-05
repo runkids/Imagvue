@@ -8,7 +8,7 @@
 
 - All Attributes can bind with data
 
-<img src="https://github.com/runkids/Imagvue/tree/master/demo/Imagvue.gif"/>
+<img src="https://github.com/runkids/Imagvue/blob/master/demo/Imagvue.gif?raw=true"/>
 
 ## Demo
 
