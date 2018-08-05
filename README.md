@@ -80,8 +80,8 @@ Also you can set attribute`lazy` for delay time
 ## Props
 
 #####  1. value
-Type: `String`
-Required: `ture`
+Type: `String`<br>
+Required: `ture`<br>
 
 The image URL. This is mandatory for the `<imagvue> `
 ```html
@@ -89,21 +89,21 @@ The image URL. This is mandatory for the `<imagvue> `
 ```
 
 #####  2. width
-Type: `String` , `Number`
-Required: `false`
+Type: `String` , `Number`<br>
+Required: `false`<br>
 Default: `auto`
 
 The intrinsic width of the image in pixels.
 
 #####  3. height
-Type: `String` , `Number`
-Required: `false`
+Type: `String` , `Number`<br>
+Required: `false`<br>
 Default: `auto`
 
 The intrinsic height of the image in pixels.
 
 #####  4. onerror
-Type: `Function`
+Type: `Function`<br>
 Required: `false`
 
 If an error occurs while trying to load or render an image ,
@@ -120,11 +120,11 @@ call a function
 <img src="https://i.imgur.com/gRfQcHz.png"/>
 
 #####  5. blur
-Type: `String` , `Number`
-Required: `false`
+Type: `String` , `Number`<br>
+Required: `false`<br>
 Default: 0
 
-Applies a Gaussian blur to the input image.
+Applies a Gaussian blur to the input image.<br>
 Range: 0 ~ larger value ( px )
 
 ```html
@@ -134,11 +134,11 @@ Range: 0 ~ larger value ( px )
 <img src="https://i.imgur.com/NcMztdp.png"/>
 
 #####  6. contrast
-Type: `String` , `Number`
-Required: `false`
+Type: `String` , `Number`<br>
+Required: `false`<br>
 Default: 100
 
-Adjusts the contrast of the input.
+Adjusts the contrast of the input.<br>
 Range: 0 ~ over 100 ( % )
 
 ```html
@@ -148,11 +148,11 @@ Range: 0 ~ over 100 ( % )
 <img src="https://i.imgur.com/ttFA4g2.png"/>
 
 #####  7. brightness
-Type: `String` , `Number`
-Required: `false`
+Type: `String` , `Number`<br>
+Required: `false`<br>
 Default: 100
 
-Applies a linear multiplier to input image
+Applies a linear multiplier to input image<br>
 Range: 0 ~ over 100 ( % )
 
 ```html
@@ -162,11 +162,11 @@ Range: 0 ~ over 100 ( % )
 <img src="https://i.imgur.com/GIK27Ec.png"/>
 
 #####  8. grayscale
-Type: `String` , `Number`
-Required: `false`
+Type: `String` , `Number`<br>
+Required: `false`<br>
 Default: 0
 
-Converts the input image to grayscale.
+Converts the input image to grayscale.<br>
 Range: 0 ~ 100 ( % )
 
 ```html
@@ -176,11 +176,11 @@ Range: 0 ~ 100 ( % )
 <img src="https://i.imgur.com/OB7ulNZ.png"/>
 
 #####  9. hueRotate
-Type: `String` , `Number`
-Required: `false`
+Type: `String` , `Number`<br>
+Required: `false`<br>
 Default: 0
 
-Applies a hue rotation on the input image.
+Applies a hue rotation on the input image.<br>
 Range: 0 ~ 360 ( deg )
 
 ```html
@@ -190,11 +190,11 @@ Range: 0 ~ 360 ( deg )
 <img src="https://i.imgur.com/qMpfv5a.png"/>
 
 #####  10. invert
-Type: `String` , `Number`
-Required: `false`
+Type: `String` , `Number`<br>
+Required: `false`<br>
 Default: 0
 
-Inverts the samples in the input image.
+Inverts the samples in the input image.<br>
 Range: 0 ~ 100 ( % )
 
 ```html
@@ -204,11 +204,11 @@ Range: 0 ~ 100 ( % )
 <img src="https://i.imgur.com/Xb7cuvT.png"/>
 
 #####  11. opacity
-Type: `String` , `Number`
-Required: `false`
+Type: `String` , `Number`<br>
+Required: `false`<br>
 Default: 0
 
-Applies transparency to the samples in the input image.
+Applies transparency to the samples in the input image.<br>
 Range: 0 ~ 100 ( % )
 
 ```html
@@ -218,11 +218,11 @@ Range: 0 ~ 100 ( % )
 <img src="https://i.imgur.com/71eAINo.png"/>
 
 #####  12. saturate
-Type: `String` , `Number`
-Required: `false`
+Type: `String` , `Number`<br>
+Required: `false`<br>
 Default: 0
 
-Saturates the input image.
+Saturates the input image.<br>
 Range: 0 ~ 100 ( % )
 
 ```html
@@ -232,11 +232,11 @@ Range: 0 ~ 100 ( % )
 <img src="https://i.imgur.com/kwZp0vz.png"/>
 
 #####  13. sepia
-Type: `String` , `Number`
-Required: `false`
+Type: `String` , `Number`<br>
+Required: `false`<br>
 Default: 0
 
-Converts the input image to sepia.
+Converts the input image to sepia.<br>
 Range: 0 ~ 100 ( % )
 
 ```html
@@ -246,8 +246,8 @@ Range: 0 ~ 100 ( % )
 <img src="https://i.imgur.com/o0t9TCD.png"/>
 
 #####  14. dropShadow
-Type: `Object`
-Required: `false`
+Type: `Object`<br>
+Required: `false`<br>
 Default: null
 
 Applies a drop shadow effect to the input image.
@@ -283,8 +283,8 @@ export default {
 <img src="https://i.imgur.com/VmnJnXR.png"/>
 
 #####  15. customData
-Type: `Object` 
-Required: `false`
+Type: `Object` <br>
+Required: `false`<br>
 Default: null
 
 This is used to pass additional information to `<imagvue>`
