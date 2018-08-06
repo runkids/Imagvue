@@ -26,7 +26,7 @@ yarn add imagvue
 ```
 or just include [imagvue.js](https://github.com/runkids/Imagvue/blob/master/dist/imagvue.js) to your view like 
 
-```js
+```html
 <script src='./imagvue.js'></script>
 ```
 
@@ -59,7 +59,37 @@ export default {
 
 ##### how to use ?
 Use `transition-group` and set attribute `src` with your loading image inner `imagvue`.
-Also you can set attribute`lazy` for delay time
+Also you can set attribute`lazy` for delay time.
+
+##### 1. src
+Type: `String`<br>
+Required: `ture`<br>
+
+Your loading image.
+
+##### 2. lazy
+Type: `Number`<br>
+Default: `0`
+
+Show image delay time.
+
+##### 3. rootMargin
+
+Type: `String`<br>
+Default: `0px`
+
+Syntax similar to that of CSS Margin
+
+[rootMargin](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/rootMargin)
+
+##### 4. threshold 
+Type: `Number`<br>
+Default: `0`
+
+Ratio of element convergence
+
+[threshold](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/thresholds)
+
 ```html
   <imagvue
     v-model="url"
@@ -68,8 +98,10 @@ Also you can set attribute`lazy` for delay time
     height="600"
   >
     <transition-group 
-      src="loading.gif" --> your loading image
-      :lazy="500" --> lazy time , default is 500 ( ms )
+      :src="require(loading.gif)" --> your loading image
+      :lazy="500" --> lazy time , default is 0 ( ms )
+      rootMargin="0px 0px"
+      :threshold="0.1"
     >
     </transition-group> 
   </imagvue>
@@ -283,7 +315,19 @@ export default {
 
 <img src="https://i.imgur.com/VmnJnXR.png"/>
 
-#####  15. customData
+#####  15. filters
+Type: `Boolean` <br>
+Required: `false`<br>
+Default: true
+
+if you won't to use filters ( blur,contrast,grayscale, etc.).<br>
+just set props `filters` to false
+
+```html
+<imagvue v-model="url" :filters="false"></imagvue>
+```
+
+#####  16. customData
 Type: `Object` <br>
 Required: `false`<br>
 Default: null
@@ -312,6 +356,7 @@ methods:{
 }
 ```
 
+
 ## Code Example
 
 ```html
@@ -335,7 +380,7 @@ methods:{
           :dropShadow="dropShadow"
           :customData="customData()"
       >
-        <transition-group :src="d.lazy"></transition-group >
+        <transition-group :src="d.lazy" :lazy="0" rootMargin="0px 0px" :threshold="0.1"></transition-group>
       </imagvue>
   </div>
 </template>
@@ -410,6 +455,3 @@ export default {
 ```
 ## License
 Imagvue is licensed under MIT License.
-
-------------
-If you have any suggestions ideas or just wanna say something you can send me an email at egg358358@gmail.com , thank you.

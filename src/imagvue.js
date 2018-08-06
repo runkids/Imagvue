@@ -121,6 +121,11 @@
         default: null
       },
 
+      filters:{
+        type: Boolean,
+        default: true
+      },
+
       customData:{
         type: Object,
         default: null,
@@ -135,9 +140,13 @@
       data(){
         return{
           lazyLoadMode: false,
-          lazyTime: 500,
+          lazyTime: 0,
           lazyLoadImage: '',
           io: null ,
+          options:{
+            rootMargin: null,
+            threshold: null,
+          },
         }
       },
 
@@ -146,10 +155,13 @@
 
         if(slots && slots.length ===1){
           const child = slots[0];
-          if( child.componentOptions && child.componentOptions.tag === "transition-group"){
+          if( child.componentOptions && child.componentOptions.tag === "transition-group"){ 
+            let { src, lazy, rootMargin='0px', threshold=0 } = child.data.attrs;
             this.lazyLoadMode = true;
-            this.lazyLoadImage = child.data.attrs.src;
-            this.lazyTime = child.data.attrs.lazy || 500;
+            this.lazyLoadImage = src;
+            this.lazyTime = lazy || 500;
+            this.options.rootMargin = rootMargin;
+            this.options.threshold = toInt(threshold);
           }
         }
 
@@ -165,7 +177,7 @@
           src: this.lazyLoadMode ? this.lazyLoadImage :this.value,
           width: this.width, 
           height: this.height,
-          ...( this.lazyLoadMode ? {'data-src':this.value } : {} )
+          ...( this.lazyLoadMode ? { 'data-src':this.value } : {} )
         };
 
         const initStyles = {
@@ -187,7 +199,7 @@
           error: this.onerror,
         }
 
-        update('style', initStyles);
+        if(this.filters) update('style', initStyles);
         update('attrs', initAttribute);
         update('on', initEvent);
 
@@ -202,29 +214,37 @@
       },
 
       methods:{
-        listenScrollEvent(change){
+
+        listenScrollEvent(entries){
           // 當圖片完全出現時
-          if(change[0].intersectionRatio){
-            setTimeout(()=>{
-              let container = change[0].target;
-              container.src = container.getAttribute('data-src');
-              this.unObserve();
-            },this.lazyTime);
-          }
+          entries.forEach(entry => {
+            if(entry.intersectionRatio > 0){
+              setTimeout(()=>{
+                this.unObserve();
+                let container = entry.target;
+                container.src = container.getAttribute('data-src');
+                container.removeAttribute('data-src');
+              },this.lazyTime);
+            }
+          });
         },
+
         unObserve(){
           if (this.io) {
             this.io.unobserve(this.$el);
           }
-        }
+        },
+
       },
 
       mounted() {
-        if(this.lazyLoadMode){
-          if ("IntersectionObserver" in window) {
-            this.io = new IntersectionObserver(this.listenScrollEvent);
-            this.io.observe(this.$el);
-          }
+        if ( this.lazyLoadMode && ("IntersectionObserver" in window) ) {
+          const { rootMargin, threshold } = this.options ;
+          this.io = new IntersectionObserver(this.listenScrollEvent,{
+            rootMargin,
+            threshold
+          });
+          this.io.observe(this.$el);
         }
       },
 
