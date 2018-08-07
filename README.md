@@ -1,6 +1,8 @@
-<h1 align="center">Imagvue</h1>
+<div align="center">
+  <img scr="https://github.com/runkids/Imagvue/blob/master/demo/Imagvue.png?raw=true" />
+</div>
 
-[![vue2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/) [![npm](https://img.shields.io/npm/v/imagvue.svg)](https://www.npmjs.com/package/imagvue) [![npm](https://img.shields.io/npm/l/imagvue.svg)](https://github.com/runkids/Imagvue/blob/master/LICENSE)
+#Imagvue [![vue2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/) [![npm](https://img.shields.io/npm/v/imagvue.svg)](https://www.npmjs.com/package/imagvue)
 
 
 - `Imagvue` provides basic image processing props(size,blur,contrast,grayscale, etc.).
@@ -57,6 +59,8 @@ export default {
 
 ## Lazy loading Image
 
+[DEMO](https://runkids.github.io/f2e/week2/)
+
 ##### how to use ?
 Use `transition-group` and set attribute `src` with your loading image inner `imagvue`.
 Also you can set attribute`lazy` for delay time.
@@ -108,6 +112,11 @@ Ratio of element convergence
 ```
 
 <img src="https://i.imgur.com/fZBnjST.gif"/>
+
+
+##### Browser Support
+
+Available in [latest browsers](http://caniuse.com/#feat=intersectionobserver). If browser support is not available, use this [polyfill](https://www.npmjs.com/package/intersection-observer).
 
 
 ## Props
