@@ -1,8 +1,6 @@
-<div align="center">
-  <img scr="https://github.com/runkids/Imagvue/blob/master/demo/Imagvue.png?raw=true" />
-</div>
+<img align="middle" scr="https://github.com/runkids/Imagvue/blob/master/demo/Imagvue.png?raw=true"/>
 
-#Imagvue [![vue2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/) [![npm](https://img.shields.io/npm/v/imagvue.svg)](https://www.npmjs.com/package/imagvue)
+# Imagvue [![vue2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/) [![npm](https://img.shields.io/npm/v/imagvue.svg)](https://www.npmjs.com/package/imagvue)
 
 
 - `Imagvue` provides basic image processing props(size,blur,contrast,grayscale, etc.).
