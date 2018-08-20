@@ -49,7 +49,7 @@ export default {
   data(){
     return {
       url: 'https://source.unsplash.com/random',
-      loaclURL: require('./imagvue.png'),
+      localURL: require('./imagvue.png'),
     }
   }
 }
