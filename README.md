@@ -1,7 +1,6 @@
 # Imagvue <img style=" text-align: center;" width='45' min-width="45" src="https://github.com/runkids/Imagvue/blob/master/demo/Imagvue.png?raw=true"/> 
 
-[![vue2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/) [![npm](https://img.shields.io/npm/v/imagvue.svg)](https://www.npmjs.com/package/imagvue)
-
+[![vue2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/) [![npm](https://img.shields.io/npm/v/imagvue.svg)](https://www.npmjs.com/package/imagvue) [![npm bundle size (minified)](https://img.shields.io/bundlephobia/min/react.svg)](https://github.com/runkids/Imagvue)
 
 - `Imagvue` provides basic image processing props(size,blur,contrast,grayscale, etc.).
 
@@ -24,10 +23,10 @@ npm i imagvue
 ```js
 yarn add imagvue
 ```
-or just include [imagvue.js](https://github.com/runkids/Imagvue/blob/master/dist/imagvue.js) to your view like 
+Directly include [imagvue.min.js](https://cdn.jsdelivr.net/npm/imagvue@0.0.5/dist/imagvue.min.js) to your view like 
 
 ```html
-<script src='./imagvue.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/imagvue@0.0.5/dist/imagvue.min.js'></script>
 ```
 
 ## Usage
